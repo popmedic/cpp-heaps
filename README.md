@@ -15,6 +15,12 @@ the traditional array way.
 make
 ```
 
+## Test
+
+```
+make test
+```
+
 ## Run
 
 ```
