@@ -1,7 +1,5 @@
 #include<iostream>
-#include "node.hpp"
-#include "min_heap.hpp"
-#include "max_heap.hpp"
+#include "heaps.hpp"
 
 using namespace std;
 

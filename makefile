@@ -1,6 +1,6 @@
-heaps : main.o node.o min_heap.o max_heap.o 
+heaps : main.o node.o min_heap.o max_heap.o
 	clang++ -o heaps main.o node.o min_heap.o max_heap.o
-main.o : main.cpp
+main.o : main.cpp heaps.hpp
 	clang++ -c main.cpp
 node.o : node.cpp node.hpp
 	clang++ -c node.cpp node.hpp
