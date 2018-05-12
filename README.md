@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/popmedic/cpp-heaps.svg?branch=master)](https://travis-ci.org/popmedic/cpp-heaps)
+
 # cpp-heaps
 
 A min and max heap in C++
