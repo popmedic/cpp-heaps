@@ -10,3 +10,5 @@ max_heap.o : max_heap.cpp max_heap.hpp
 	clang++ -c max_heap.cpp max_heap.hpp
 clean :
 	rm heaps *.o *.gch
+run : heaps
+	./heaps

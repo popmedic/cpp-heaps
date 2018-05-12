@@ -16,5 +16,11 @@ make
 ## Run
 
 ```
-./heaps
+make run
+```
+
+## Clean up
+
+```
+make clean
 ```
