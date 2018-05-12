@@ -4,7 +4,7 @@
 
 #include "heaps.hpp"
 
-#define ARRAY_SIZE 10
+#define ARRAY_SIZE 13
 #define DATA_RANGE 100
 
 using namespace std;
