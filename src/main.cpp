@@ -1,4 +1,5 @@
 #include<iostream>
+#include<string>
 #include<cstdlib>
 #include<ctime>
 
@@ -11,21 +12,38 @@ using namespace std;
 
 int main(int argc, char const *argv[])
 {
-    int array[ARRAY_SIZE];
+    int *array;
+    int array_size;
 
-    srand(time(NULL));
-    for(int i = 0; i < ARRAY_SIZE; i++) array[i] = rand()%DATA_RANGE;
+    if (argc > 1) {
+        array_size = argc - 1;
+        array = new int[array_size];
+        for(int i = 0; i < array_size; i++) array[i] = atoi(argv[i+1]);
+    } else {
+        array_size = ARRAY_SIZE;
+        array = new int[array_size];
+        srand(time(NULL));
+        for(int i = 0; i < array_size; i++) array[i] = rand()%DATA_RANGE;
+    }
     
     MinHeap *min_heap = new MinHeap(array[0]);
-    for (int i = 1; i < ARRAY_SIZE; i++) min_heap->insert(new MinNode(array[i]));
-    cout << "Min Heap result:" << endl;
-    min_heap->print();
-    delete min_heap;
-
     MaxHeap *max_heap = new MaxHeap(array[0]);
-    for (int i = 1; i < ARRAY_SIZE; i++) max_heap->insert(new MaxNode(array[i]));
-    cout << "Max Heap result:" << endl;
+
+    for (int i = 1; i < array_size; i++) {
+        min_heap->insert(new MinNode(array[i]));
+        max_heap->insert(new MaxNode(array[i]));
+    }
+
+    cout << endl << "smallest number: " << min_heap->data << endl;
+    cout << "largest number: " << max_heap->data << endl << endl;
+    
+    cout << "min_heap dump:" << endl;
+    min_heap->print();
+    cout << "max_heap dump:" << endl;
     max_heap->print();
+
+    delete array;
+    delete min_heap;
     delete max_heap;
 
     return 0;
