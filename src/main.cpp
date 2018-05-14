@@ -5,8 +5,8 @@
 
 #include "heaps.hpp"
 
-#define ARRAY_SIZE 1000
-#define DATA_RANGE 10000
+#define ARRAY_SIZE 9
+#define DATA_RANGE 100
 
 using namespace std;
 
@@ -75,16 +75,16 @@ int main(int argc, char const *argv[])
     cout << endl << "time test:" << endl;
     start = clock();
     m = get_min_h(array_size, array);
-    cout << "min_heap: (" << m << ")" << ((float)(clock() - start))/CLOCKS_PER_SEC << endl;
+    cout << "min_heap(" << m << "): " << clock() - start << " clicks" << endl;
     start = clock();
     m = get_min_a(array_size, array);
-    cout << "min_array: (" << m << ")" << ((float)(clock() - start))/CLOCKS_PER_SEC << endl;
+    cout << "min_array(" << m << "): " << clock() - start << " clicks" << endl;
     start = clock();
     m = get_max_h(array_size, array);
-    cout << "max_heap: (" << m << ")" << ((float)(clock() - start))/CLOCKS_PER_SEC << endl;
+    cout << "max_heap(" << m << "): " << clock() - start << " clicks" << endl;
     start = clock();
     m = get_max_a(array_size, array);
-    cout << "max_array: (" << m << ")" << ((float)(clock() - start))/CLOCKS_PER_SEC << endl;
+    cout << "max_array(" << m << "): " << clock() - start << " clicks" << endl;
 
     delete array;
     delete min_heap;
