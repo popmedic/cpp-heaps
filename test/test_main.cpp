@@ -21,6 +21,7 @@ int main(int argc, char const *argv[])
     delete min_heap;
     delete max_heap;
 
-    std::cout << "Test Success" << std::endl;
+    std::cout << std::endl << "Test Success" << std::endl << std::endl;
+
     return 0;
 }

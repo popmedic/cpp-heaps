@@ -84,7 +84,7 @@ int main(int argc, char const *argv[])
     cout << "max_heap(" << m << "): " << clock() - start << " clicks" << endl;
     start = clock();
     m = get_max_a(array_size, array);
-    cout << "max_array(" << m << "): " << clock() - start << " clicks" << endl;
+    cout << "max_array(" << m << "): " << clock() - start << " clicks" << endl << endl;
 
     delete array;
     delete min_heap;
